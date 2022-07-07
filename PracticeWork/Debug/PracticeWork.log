@@ -1,0 +1,14 @@
+﻿Построение начато 05.07.2022 19:39:47.
+     1>Проект "J:\documents\Visual Studio 2012\Projects\PracticeWork\PracticeWork\PracticeWork.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         J:\Software\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\PracticeWork.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt PracticeWork.cpp
+         PracticeWork.cpp
+       Link:
+         J:\Software\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"J:\documents\Visual Studio 2012\Projects\PracticeWork\Debug\PracticeWork.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"J:\documents\Visual Studio 2012\Projects\PracticeWork\Debug\PracticeWork.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"J:\documents\Visual Studio 2012\Projects\PracticeWork\Debug\PracticeWork.lib" /MACHINE:X86 Debug\PracticeWork.obj
+         Debug\stdafx.obj
+         PracticeWork.vcxproj -> J:\documents\Visual Studio 2012\Projects\PracticeWork\Debug\PracticeWork.exe
+     1>Построение проекта "J:\documents\Visual Studio 2012\Projects\PracticeWork\PracticeWork\PracticeWork.vcxproj" завершено (целевые объекты Build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:00.73
