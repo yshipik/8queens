@@ -1,4 +1,4 @@
-﻿Построение начато 05.07.2022 19:39:47.
+﻿Построение начато 09.07.2022 21:55:39.
      1>Проект "J:\documents\Visual Studio 2012\Projects\PracticeWork\PracticeWork\PracticeWork.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
          J:\Software\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\PracticeWork.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt PracticeWork.cpp
@@ -11,4 +11,4 @@
 
 Построение успешно завершено.
 
-Затраченное время: 00:00:00.73
+Затраченное время: 00:00:00.78
