@@ -1,12 +1,14 @@
 #include "stdafx.h"
 #include <cmath>
 #include <iostream>
+#include <fstream>
 using std::endl;
 using std::cout;
-
+using std::cin;
+using std::ofstream;
 struct myqueens
 {
-    int q[8], qd[8], qg[8];
+    int *q, *qd, *qg;
     int n; // размерность
     int num; // кол-во решений
 };
@@ -67,12 +69,55 @@ void print_solution(myqueens &q){
     }
     std::cout << std::endl;
 }
+
+void ask_for_write(bool &flag) {
+	int tmp;
+	cout << "1 вывод в файл, 0 вывод на экран:";
+	cin >> tmp;
+	if(tmp == 1)  flag = true;
+	else if (tmp == 0){
+		flag = false;
+		cout << "Запрошен вывод в ОКП" << endl;
+	} else {
+		flag = false;
+		cout << "Запрошен вывод в ОКП" << endl;
+		cout << "Был введен некорректный индекс, запись в файл проигнорирована" << endl;
+	
+	}
+}
+
+void init_file(ofstream &file, bool &flag) {
+	char buff[40];
+	cout << "Введите имя файла:";
+	cin >> buff;
+	file.open(buff, 'w');
+	if (!file.is_open())
+	{
+		cout << "Не удалось открыть файл" << endl;
+		flag = false;
+		return;
+	}
+}
+void write_solution(ofstream &file, myqueens q) {
+	for(int j = 0; j < q.n; j++){
+		file << q.q[j] + 1 << " ";
+	}
+    file << std::endl;
+}
 int main() {
     setlocale(LC_ALL, "Ru");
+	system("color f0");
 	cout << "Задача о восьми ферзях, исключение всех избыточных решений" 
 		<< std::endl;
+	bool do_write;
+	ofstream file;
+	ask_for_write(do_write);
+	if(do_write) init_file(file, do_write);
     myqueens q; // создаем структуру
 	q.n = 8;
+	q.q = new int[q.n];
+	q.qd = new int[q.n];
+	q.qg = new int[q.n];
 	q.num = 0;
 	bool isrot;
 	for(int m = 0; m < q.n;m++) q.q[m] = 0;
@@ -90,12 +135,19 @@ int main() {
 		if(x < z || y < z)	isrot = false;
 		if(q.q[0] < q.q[7] && isrot){
 			q.num += 1;
-			print_solution(q);
+			if(do_write) write_solution(file, q);
+			else print_solution(q);
 		}
 		i--;
 		shift(i, q.n, q.q);
 	}
     cout << "Всего решений:" << q.num << endl;
+	delete[] q.q;
+	delete[] q.qd;
+	delete[] q.qg;
+	if (do_write) {
+		file.close();
+	}
     system("pause");
     return 0;
 }
